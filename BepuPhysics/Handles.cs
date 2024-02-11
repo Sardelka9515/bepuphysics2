@@ -65,6 +65,12 @@ namespace BepuPhysics
         {
             return a.Value == b.Value;
         }
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static explicit operator int(BodyHandle handle) => handle.Value;
+
+        [MethodImpl(MethodImplOptions.AggressiveInlining)]
+        public static explicit operator BodyHandle(int handle) => new(handle);
     }
 
     /// <summary>
