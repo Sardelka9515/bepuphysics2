@@ -71,6 +71,8 @@ namespace BepuPhysics
 
         [MethodImpl(MethodImplOptions.AggressiveInlining)]
         public static explicit operator BodyHandle(int handle) => new(handle);
+
+        public static readonly BodyHandle Invalid = new(-1);
     }
 
     /// <summary>

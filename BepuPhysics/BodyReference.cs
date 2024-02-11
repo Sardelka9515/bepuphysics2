@@ -12,6 +12,8 @@ namespace BepuPhysics
     /// <remarks>Note that this type makes no attempt to protect against unsafe modification of body properties, nor does modifying its properties try to wake up bodies if they are asleep.</remarks>
     public struct BodyReference
     {
+        public static readonly BodyReference Invalid = new(new(-1), null);
+        
         /// <summary>
         /// Handle of the body that this reference refers to.
         /// </summary>
